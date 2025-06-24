@@ -1,5 +1,6 @@
-functions-framework==3.*
-flask
-pymysql
-sqlalchemy
-dotenv
+fastapi==0.109.0
+uvicorn==0.27.0
+pymysql==1.1.0
+sqlalchemy==2.0.23
+python-dotenv==1.0.0
+pydantic==2.5.0

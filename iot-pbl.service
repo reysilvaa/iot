@@ -1,0 +1,15 @@
+[Unit]
+Description=IoT PBL API Service
+After=network.target
+
+[Service]
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/iot-pbl
+ExecStart=/home/ubuntu/iot-pbl/venv/bin/gunicorn -c gunicorn_config.py main:app
+Restart=always
+RestartSec=5
+SyslogIdentifier=iot-pbl
+
+[Install]
+WantedBy=multi-user.target 
